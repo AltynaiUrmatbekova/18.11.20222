@@ -1,47 +1,46 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  .example-1::before {
-    content: "🦕";
-  
-    border: 5px solid black;
-  }
-  .example-1::after {
-    content: "🌹Hello🌹";
-  
-    font-weight: 700;
-  }
-  
-  
-  
-  [data-popover] {
-    position: relative;
-  }
-  [data-popover]::after {
-    content: attr(data-popover);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 124);
-    position: absolute;
-    left: 0;
-    top: 35px;
-    display: none;
-  }
-  [data-popover]::before {
-    content: " ";
-    height: 10px;
-    width: 20px;
-    border-bottom: 10px solid rgb(255, 255, 124);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    position: absolute;
-    top: 15px;
-    left: 0;
-    display: none;
-  }
-  [data-popover]:focus::after,
-  [data-popover]:focus::before {
-    display: block;
-  }
+  box-sizing: border-box;
+}
+.example-1::after {
+content: "!!!";
+
+border: 5px solid yellow;
+}
+.example-2::before {
+  content: "***";
+
+  font-weight: 700;
+  background-color: pink;
+}
+
+.example-3::after {
+  content: "%#*";
+  background-color: yellow;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+[data-popover]::after {
+  content: attr(data-popover);
+  box-shadow: 0 0 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: yellow;
+  position: relative;
+  left: 0;
+  top: 35px;
+  display: none;
+}
+[data-popover]::before {
+  content: " ";
+  height: 10px;
+  width: 10px;
+  border-bottom: 10px solid yellow;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  display: none;
+}
+[data-popover]:focus::after,
+[data-popover]:focus::before {
+  display: block;
+}
